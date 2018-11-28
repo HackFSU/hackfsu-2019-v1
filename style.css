@@ -1,0 +1,135 @@
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('fonts/AvenirLTStd-Book.eot'); /* IE9 Compat Modes */
+	src: url('fonts/AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('fonts/AvenirLTStd-Book.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('fonts/AvenirLTStd-Book.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('fonts/AvenirLTStd-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('fonts/AvenirLTStd-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+	background: #edf8ff;
+	top: 0px;
+	text-align: center;
+	margin: 0px; padding: 0px;
+}
+
+#allPages {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	left: 0px; top: 0px;
+	/* max-width: 1200px; */
+}
+
+#mainPage {
+	position: relative;
+	min-width: 1000px;
+	min-height: 800px;
+	/* TODO: figure out how to handle smaller windows */
+	/* eg, do we want title to nest upwards? */
+}
+
+#mainTop {
+	height: 100vh;
+	text-align: center;
+}
+
+#logoContainer {
+	position: absolute;
+	width: 196px; height: 58px;
+	left: 50px; top: 80px;
+}
+
+#logo {
+	width: 196px; height: 58px;
+	-webkit-filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
+	        filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
+}
+
+#mlhImg {
+	position: absolute;
+	width: 177px; height: 307px;
+	right: 50px; top: 0px;
+}
+
+#mainPageTitleContainer {
+	position: relative;
+	display: inline-block;
+	margin-top: 10vh;
+	vertical-align: middle;
+}
+
+#title {
+	color: #2460a0;
+	font-size: 8em;
+	font-family: GalanoGrotesque;
+	margin-bottom: -14px;
+}
+
+#subTitle {
+	color: #525252;
+	font-size: 2em;
+	font-family: Avenir;
+}
+
+#subDateTitle {
+	color: #525252;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Avenir;
+}
+
+#getUpdatesBtn {
+	background: #36c7e2;
+	width: 492px; height: 89px;
+	line-height: 89px;
+	border-radius: 89px;
+	color: white;
+	vertical-align: middle;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Avenir;
+	margin-top: 40px;
+	cursor: pointer;
+}
+
+#getUpdatesBtn:hover {
+	background: #44b9ce;
+}
+
+.mainBar {
+	position: absolute;
+	width: 100%; height: 36px;
+	box-sizing: border-box;
+	border: 1px solid #ffffff22;
+}
+
+.orangeBar {
+	background: #ff7756;
+	bottom: 72px;
+}
+
+.yellowBar {
+	background: #ffc875;
+	bottom: 36px;
+}
+
+.blueBar {
+	background: #36c7e2;
+	bottom: 0px;
+}
+
