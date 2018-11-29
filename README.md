@@ -3,7 +3,7 @@
 
 ## Setup
 
-1. $ `git clone https://gitlab.com/dylnmc/hackfsu-spring2019`
+1. $ `git clone https://github.com/HackFSU/hackfsu2019_com`
 
 2. $ `cd hackfsu-spring2019`
 
