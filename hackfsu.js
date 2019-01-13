@@ -1,11 +1,13 @@
 function main() {
 
 	var logoBaseCan = document.createElement("canvas");
-	var logoCan = document.createElement("canvas");
+	var logoImg = document.getElementById("logo");
 	var logoImgData = null;
 	var logoOverCan = document.createElement("canvas");
 
-	var logoW = 196, logoH = 58;
+	// probably want to have a larger image and use scale <=1 to prevent blur
+	var logoScale = 0.4;
+	var logoW, logoH; // was 196 by 58
 
 	var getUpdatesBtn = document.getElementById("getUpdatesBtn");
 
@@ -13,7 +15,7 @@ function main() {
 
 	function init() {
 		setupLogo();
-		window.setTimeout(animateLogo.bind(null, 147, 65), 50);
+		window.setTimeout(animateLogo.bind(null, logoW / 1.6, logoH), 50);
 
 		addListeners();
 	}
@@ -23,9 +25,13 @@ function main() {
 	}
 
 	function setupLogo() {
-		logoBaseCan.width = logoW; logoBaseCan.height = logoH;
+		logoW = logoImg.width  * logoScale;
+		logoH = logoImg.height * logoScale;
+		logoImg.style.width  = logoW + "px";
+		logoImg.style.height = logoH + "px";
+		logoBaseCan.width = logoW;
+		logoBaseCan.height = logoH;
 		var logoBaseCtx = logoBaseCan.getContext("2d");
-		var logoImg = document.getElementById("logo");
 		logoBaseCtx.drawImage(logoImg, 0, 0, logoW, logoH);
 
 		logoImgData = logoBaseCtx.getImageData(0, 0, logoW, logoH);
@@ -49,16 +55,19 @@ function main() {
 	function animateLogo(x, y, o) {
 		if (! o) {
 			o = {
-				ax: 0, ainc: .008, amax: 0.3,
+				ax: 0.5, ainc: .008, amax: 0.6,
 				vx: -0.2, vmax: 0.8,
-				x: x
+				x: x,
+				maxX: logoW * 0.9,
+				minX: x * 1.25,
+				r: logoW / 2.7,
+				update: 80
 			};
 		}
 
-
-		if (x > 210 && o.ainc > 0)
+		if (x > o.maxX && o.ainc > 0)
 			o.ainc *= -1;
-		if (x < 160 && o.ainc < 0)
+		if (x < o.minX && o.ainc < 0)
 			o.ainc *= -1;
 		o.ax = Math.max(-o.amax, Math.min(o.amax, o.ax + o.ainc));
 		o.vx = Math.max(-o.amax, Math.min(o.amax, o.vx + o.ax));
@@ -68,12 +77,12 @@ function main() {
 		var logoOverCtx = logoOverCan.getContext("2d");
 		logoOverCtx.putImageData(logoImgData, 0, 0);
 		logoOverCtx.beginPath();
-		logoOverCtx.arc(x, y, 97, 0, 2 * Math.PI);
+		logoOverCtx.arc(x, y, o.r, 0, 2 * Math.PI);
 		logoOverCtx.globalCompositeOperation = "source-in";
 		logoOverCtx.fillStyle = "#2fddf4";
 		logoOverCtx.fill();
 
-		window.setTimeout(animateLogo.bind(this, x, y, o), 160);
+		window.setTimeout(animateLogo.bind(this, x, y, o), o.update);
 	}
 
 }
