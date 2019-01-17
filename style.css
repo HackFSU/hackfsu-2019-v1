@@ -47,19 +47,27 @@ body {
 	/* eg, do we want title to nest upwards? */
 }
 
-#infoPage, #faqPage {
+#infoPage, #faqPage, #culturePage, #sponsorPage {
 	text-align: left;
 	font-size: 2em;
 }
 
 #faqPage {
 	text-align: center;
+	background: #2460a0;
+	-webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+	        clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+}
+
+#titleContainer {
+	position: relative;
 }
 
 #logoContainer {
 	position: absolute;
 	/* width: 196px; height: 58px; */
-	right: 90%; top: 6.2em;
+	height: 100%;
+	right: 96%; top: 4em;
 }
 
 #logo {
@@ -105,8 +113,16 @@ body {
 }
 
 .subSubTitle {
-	font-family: GalanoGrotesque;
+	font-family: Avenir;
 	font-size: 1.6em;
+	font-weight: bold;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+.contentText {
+	font-family: Avenir;
+	font-size: 1.4em;
 }
 
 .boldText {
@@ -177,24 +193,54 @@ body {
 .sepLine {
 	position: relative;
 	display: block;
-	width: 5em;
-	height: 0.3em;
+	width: 150px;
+	height: 8px;
 	margin: 0.4em 0px;
 }
 
 #dropdownContainer {
-	position: relative;
-	display: inline-block;
+	display: relative;
+	text-align: center;
+	width: 90%;
 }
 
 .dropdown {
 	position: relative;
-	display: block;
+	display: inline-block;
 	font-weight: bold;
 	width: 90%;
-	max-width: 800px;
+	/* max-width: 800px; */
 	background: white;
 	padding: 2%;
+	margin:  1%;
 	text-align: left;
+}
+
+.dropdownArrow {
+	position: absolute;
+	height: 1.6em;
+	width:  1.6em;
+	right: 1em;
+}
+
+#telescope {
+	position: relative;
+	display: inline;
+	width: 39%;
+	float: left;
+}
+
+#cultureInner {
+	position: relative;
+	display: inline;
+	margin-right: 2%;
+	margin-top: 2%;
+	width: 48%;
+	float: right;
+	line-height: 2.0em;
+}
+
+#sponsorPage {
+	background: white;
 }
 
