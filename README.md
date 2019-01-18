@@ -16,9 +16,10 @@
 
 ## TODO
 
-### zeit
+### now
 
-+ For deployment, consider: [zeit](https://zeit.co/now)
++ For deployment, consider: [now](https://zeit.co/now)
+    - success: view at [https://hackfsu2019com-d5tg9t2zc.now.sh/](https://hackfsu2019com-d5tg9t2zc.now.sh/)
 
 ### Drop-downs
 
@@ -32,14 +33,14 @@
 + Figure out what to do when "Get Updates" button is clicked and make happen
   with frontend in javascript and backend in node
 
-### Mobile
+### Various Resolutions
 
-+ Looks like crap on a mobile phone
++ Looks like crap on a mobile phone and really large screens
     - "sorry" - Dylan
 
 ### Security
 
-+ We don't have any dynamic stuff, but still need security.
++ We don't have any dynamic stuff, so no need for security
 + Do we want to have an admin/login stuff? If so: definitely need security and
   potentially a framework for backend
     - Talk with person from last year who developed the website for last year's
