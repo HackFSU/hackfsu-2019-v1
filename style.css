@@ -19,67 +19,132 @@
 		 url('fonts/AvenirLTStd-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-body {
+body, html {
 	background: #edf8ff;
-	top: 0px;
+	height: 100%;
+	margin: 0 auto;
 	text-align: center;
-	margin: 0px; padding: 0px;
-	overflow-y: scroll;
 	font-family: Avenir;
+}
+
+#mainPage {
+    background-image: url('images/img-02.svg');
+    background-size: cover;
+    background-size: 100% auto;
+    background-repeat: repeat;
+    height:550px;
 }
 
 #allPages {
 	position: relative;
 	display: inline-block;
 	text-align: center;
-	width: 100%;
-	left: 0px; top: 0px;
-	/* max-width: 1200px; */
 }
 
 .page {
 	position: relative;
-	min-width: 1000px;
-	min-height: 800px;
-	height: 100vh;
 	text-align: center;
 	/* TODO: figure out how to handle smaller windows */
 	/* eg, do we want title to nest upwards? */
+}
+
+.logo {
+  float: left;
+  width: 100px;
+  padding: 20px;
+}
+
+.mlh {
+  float: right;
+  width: 100px;
+  padding-right: 40px;
+}
+
+.swirl_border {
+  width: 100%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+}
+
+#navigation-container {
+  width: 1000px;
+  margin: 0 auto;
+  height: 70px;
+}
+
+.navigation-bar {
+  height: 70px;
+  width: 100%;
+}
+
+.navigation-bar ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  float: left;
+}
+
+.navigation-bar li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline;
+}
+
+.navigation-bar li a {
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 5px 15px;
+  opacity: 0.7;
+}
+
+#menu {
+  float: right;
 }
 
 #infoPage, #faqPage, #culturePage, #sponsorPage {
 	text-align: left;
 	font-size: 2em;
 }
+#infoPage{
+	height: 900px;
+}
+#culturePage {
+	background-image: url('images/img-02.svg');
+    background-size: cover;
+    background-size: 100% auto;
+    background-repeat: repeat;
+    height:750px;
+}
 
 #faqPage {
 	text-align: center;
+	height: 810px;
 	background: #2460a0;
 	-webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
 	        clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
 }
 
-#titleContainer {
-	position: relative;
+#sponsorPage {
+	height:500px;
 }
 
-#logoContainer {
-	position: absolute;
-	/* width: 196px; height: 58px; */
-	height: 100%;
-	right: 96%; top: 4em;
-}
-
-#logo {
-	width: 738px; height: 202px;
-	-webkit-filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
-	        filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
+#footer {
+	background: #414042;
+	color: white;
 }
 
 #mlhImg {
-	position: absolute;
-	width: 177px; height: 307px;
-	right: 50px; top: 0px;
+  position:absolute;
+  z-index:1;
+  width: 177px; height: 307px;
 }
 
 .pageContent {
@@ -97,36 +162,39 @@ body {
 
 .title {
 	color: #2460a0;
-	font-size: 8em;
+	font-size: 6em;
 	font-family: GalanoGrotesque;
 	margin-bottom: -14px;
 }
 
 .subTitleSkinny {
 	color: #525252;
-	font-size: 2em;
+	font-size: 1.3em;
 }
 
 .subTitle {
 	font-family: GalanoGrotesque;
-	font-size: 2em;
+	font-size: 1.2em;
 }
 
 .subSubTitle {
 	font-family: Avenir;
-	font-size: 1.6em;
+	font-size: 1em;
 	font-weight: bold;
-	margin-top: 0.4em;
-	margin-bottom: 0.4em;
+	line-height: 1.5em;
 }
 
-.contentText {
+p {
 	font-family: Avenir;
-	font-size: 1.4em;
+	font-size: .6em;
+	line-height: 1.5em;
 }
 
-.boldText {
+h3 {
+	font-family: Avenir;
+	font-size: .8em;
 	font-weight: bold;
+	margin: 0px;
 }
 
 .leftText {
@@ -134,20 +202,23 @@ body {
 }
 
 #getUpdatesBtn {
-	width: 492px; height: 89px;
-	font-size: 2em;
+	width: 250px;
+	font-size: 1.3em;
 	font-weight: bold;
 	font-family: Avenir;
 	margin-top: 40px;
 }
 
 .button {
-	cursor: pointer;
-	vertical-align: middle;
-	color: white;
-	background: #36c7e2;
-	line-height: 89px;
+
 	border-radius: 89px;
+	background-color: #36c7e2;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
 
 	-webkit-touch-callout: none; /* iOS Safari */
 	  -webkit-user-select: none; /* Safari */
@@ -202,6 +273,7 @@ body {
 	display: relative;
 	text-align: center;
 	width: 90%;
+	margin-top: -20px;
 }
 
 .dropdown {
@@ -226,21 +298,26 @@ body {
 #telescope {
 	position: relative;
 	display: inline;
-	width: 39%;
+	width: 28%;
 	float: left;
 }
 
 #cultureInner {
 	position: relative;
 	display: inline;
-	margin-right: 2%;
-	margin-top: 2%;
-	width: 48%;
+	width: 60%;
 	float: right;
-	line-height: 2.0em;
 }
 
 #sponsorPage {
 	background: white;
+}
+
+#footer .fa {
+    padding-top:20px;
+    padding-left:10px;
+    color:#fff;
+    font-size: 20px;
+    text-decoration:none;
 }
 
