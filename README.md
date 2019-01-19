@@ -44,7 +44,7 @@
 + Do we want to have an admin/login stuff? If so: definitely need security and
   potentially a framework for backend
     - Talk with person from last year who developed the website for last year's
-      hackathon (sorry: his name eludes me)
+      hackathon (Steven?)
 
 ### Backend and the Rest
 
