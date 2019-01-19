@@ -13,13 +13,16 @@
     - This runs a node server on *localhost* on port *8080*
     - In your web browser, navigate to `http://127.0.0.1:8080/`
 
+## Now Deployment
+
+The most recent deployment can be [viewed here](https://hackfsu2019com-9tkahgavp.now.sh)
+
+*updated Jan 19, 2019 17:57 EST*
+
 
 ## TODO
 
 ### now
-
-+ For deployment, consider: [now](https://zeit.co/now)
-    - success: view at [https://hackfsu2019com-d5tg9t2zc.now.sh/](https://hackfsu2019com-d5tg9t2zc.now.sh/)
 
 ### Drop-downs
 
