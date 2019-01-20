@@ -51,7 +51,7 @@ function main() {
 		logoOverCan.style.top  = "0px";
 		logoParent.appendChild(logoOverCan);
 	}
-
+/*
 	function animateLogo(x, y, o) {
 		if (! o) {
 			o = {
@@ -84,6 +84,7 @@ function main() {
 
 		window.setTimeout(animateLogo.bind(this, x, y, o), o.update);
 	}
+	*/
 
 }
 
