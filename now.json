@@ -1,4 +1,16 @@
 {
   "version": 2,
-  "name": "hackfsu/web"
+  "name": "hackfsu/frontend",
+  "builds": [
+    {
+      "src": "src/**",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/$1"
+    }
+  ]
 }
