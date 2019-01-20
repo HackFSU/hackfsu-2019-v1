@@ -1,9 +1,9 @@
 function main() {
 
-	var logoBaseCan = document.createElement("canvas");
+	//var logoBaseCan = document.createElement("canvas");
 	var logoImg = document.getElementById("logo");
 	var logoImgData = null;
-	var logoOverCan = document.createElement("canvas");
+	//var logoOverCan = document.createElement("canvas");
 
 	// probably want to have a larger image and use scale <=1 to prevent blur
 	var logoScale = 0.4;
