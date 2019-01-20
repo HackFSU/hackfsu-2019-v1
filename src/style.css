@@ -19,132 +19,81 @@
 		 url('fonts/AvenirLTStd-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-body, html {
+body {
 	background: #edf8ff;
-	height: 100%;
-	margin: 0 auto;
+	top: 0px;
 	text-align: center;
+	margin: 0px; padding: 0px;
+	overflow-y: scroll;
 	font-family: Avenir;
-}
-
-#mainPage {
-    background-image: url('images/img-02.svg');
-    background-size: cover;
-    background-size: 100% auto;
-    background-repeat: repeat;
-    height:550px;
 }
 
 #allPages {
 	position: relative;
 	display: inline-block;
 	text-align: center;
+	width: 100%;
+	left: 0px; top: 0px;
+	/* max-width: 1200px; */
 }
 
 .page {
 	position: relative;
+	height: 100vh;
 	text-align: center;
 	/* TODO: figure out how to handle smaller windows */
 	/* eg, do we want title to nest upwards? */
-}
-
-.logo {
-  float: left;
-  width: 100px;
-  padding: 20px;
-}
-
-.mlh {
-  float: right;
-  width: 100px;
-  padding-right: 40px;
-}
-
-.swirl_border {
-  width: 100%;
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-  overflow: hidden;
-}
-
-#navigation-container {
-  width: 1000px;
-  margin: 0 auto;
-  height: 70px;
-}
-
-.navigation-bar {
-  height: 70px;
-  width: 100%;
-}
-
-.navigation-bar ul {
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-  float: left;
-}
-
-.navigation-bar li {
-  list-style-type: none;
-  padding: 0px;
-  height: 24px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  display: inline;
-}
-
-.navigation-bar li a {
-  color: black;
-  font-size: 16px;
-  text-decoration: none;
-  line-height: 70px;
-  padding: 5px 15px;
-  opacity: 0.7;
-}
-
-#menu {
-  float: right;
 }
 
 #infoPage, #faqPage, #culturePage, #sponsorPage {
 	text-align: left;
 	font-size: 2em;
 }
-#infoPage{
-	height: 900px;
+a {
+	text-decoration: none;
 }
-#culturePage {
-	background-image: url('images/img-02.svg');
-    background-size: cover;
-    background-size: 100% auto;
-    background-repeat: repeat;
-    height:750px;
-}
-
 #faqPage {
 	text-align: center;
-	height: 810px;
 	background: #2460a0;
 	-webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
 	        clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
 }
 
-#sponsorPage {
-	height:500px;
+#titleContainer {
+	position: relative;
+}
+/*if page is larger than mobile do this*/
+@media(min-width:800px) { #logoContainer {
+	position: absolute;
+	/*width: 196px; height: 58px; */
+	height: 100%;
+	right: 100%; top: 3em;
+}
 }
 
-#footer {
-	background: #414042;
-	color: white;
+#logoContainer {
+	margin: 0 auto;
+	
 }
+
+#logo {
+	width: 538px; height: 202px;
+	/* -webkit-filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
+			filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
+			*/
+
+}
+#mainPage {
+	background: url(images/img-2.svg);
+	
+
+}
+
 
 #mlhImg {
-  position:absolute;
-  z-index:1;
-  width: 177px; height: 307px;
+	position: absolute;
+	width: 177px; height: 307px;
+	right: 50px; top: 0px;
 }
 
 .pageContent {
@@ -159,67 +108,86 @@ body, html {
 .mainContent {
 	width: auto;
 }
-
 .title {
 	color: #2460a0;
-	font-size: 6em;
+	font-size: 4em;
 	font-family: GalanoGrotesque;
 	margin-bottom: -14px;
 }
-
+@media(min-width:800px) {
+.title {
+	color: #2460a0;
+	font-size: 8em;
+	font-family: GalanoGrotesque;
+	margin-bottom: -14px;
+}
+}
+@media(min-width:800px) {
 .subTitleSkinny {
 	color: #525252;
-	font-size: 1.3em;
+	font-size: 2em;
+}
+}
+.subTitleSkinny {
+	color: #525252;
+	font-size: 1.5em;
 }
 
 .subTitle {
 	font-family: GalanoGrotesque;
-	font-size: 1.2em;
+	font-size: 2em;
 }
 
 .subSubTitle {
 	font-family: Avenir;
-	font-size: 1em;
+	font-size: 1.6em;
 	font-weight: bold;
-	line-height: 1.5em;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
 }
 
-p {
+.contentText {
 	font-family: Avenir;
-	font-size: .6em;
-	line-height: 1.5em;
+	font-size: 1.4em;
 }
 
-h3 {
-	font-family: Avenir;
-	font-size: .8em;
+.boldText {
 	font-weight: bold;
-	margin: 0px;
 }
 
 .leftText {
 	text-align: left;
 }
-
+@media(max-width:800px) {
 #getUpdatesBtn {
-	width: 250px;
-	font-size: 1.3em;
+	width: 4vm; height: 1vm;
+	font-size: 1em;
 	font-weight: bold;
 	font-family: Avenir;
-	margin-top: 40px;
+	vertical-align: middle;
+	margin: 0 auto;
+	
+
+
+}
+}
+#getUpdatesBtn {
+	font-size: 1.3em;
+	font-weight: bold;
+	width: 160px;
+	margin: 0 auto;
 }
 
+
+
 .button {
-
-	border-radius: 89px;
-	background-color: #36c7e2;
-	color: white;
-	padding: 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
 	cursor: pointer;
-
+	vertical-align: middle;
+	color: white;
+	background: #36c7e2;
+	line-height: 60px;
+	border-radius: 89px;
+	width: 90px;
 	-webkit-touch-callout: none; /* iOS Safari */
 	  -webkit-user-select: none; /* Safari */
 	   -khtml-user-select: none; /* Konqueror HTML */
@@ -227,7 +195,6 @@ h3 {
 	      -ms-user-select: none; /* Internet Explorer/Edge */
 	          user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
-
 #getUpdatesBtn:hover {
 	background: #44b9ce;
 }
@@ -238,7 +205,14 @@ h3 {
 	width: 100%;
 	overflow-x: hidden;
 }
-
+@media(max-width:800px) {
+	#mainBottom {
+	overflow: hidden;
+  position: fixed;
+  bottom: 0;
+ width: ;
+	}
+}
 .mainBar {
 	position: relative;
 	width: 100%; height: 36px;
@@ -267,57 +241,5 @@ h3 {
 	width: 150px;
 	height: 8px;
 	margin: 0.4em 0px;
-}
-
-#dropdownContainer {
-	display: relative;
-	text-align: center;
-	width: 90%;
-	margin-top: -20px;
-}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
-	font-weight: bold;
-	width: 90%;
-	/* max-width: 800px; */
-	background: white;
-	padding: 2%;
-	margin:  1%;
-	text-align: left;
-}
-
-.dropdownArrow {
-	position: absolute;
-	height: 1.6em;
-	width:  1.6em;
-	right: 1em;
-}
-
-#telescope {
-	position: relative;
-	display: inline;
-	width: 28%;
-	float: left;
-}
-
-#cultureInner {
-	position: relative;
-	display: inline;
-	width: 60%;
-	float: right;
-}
-
-#sponsorPage {
-	background: white;
-}
-
-#footer .fa {
-    padding-top:20px;
-    padding-left:10px;
-    color:#fff;
-    font-size: 20px;
-    text-decoration:none;
 }
 
