@@ -72,7 +72,7 @@ a {
 }
 
 #logoContainer {
-	margin: 0 auto;
+	padding-right: 20px;
 	
 }
 
@@ -132,6 +132,12 @@ a {
 	color: #525252;
 	font-size: 1.5em;
 	letter-spacing: 3px;
+}
+@media(max-width:506px) { 
+	span {
+	display: none;
+	opacity: 0;
+	}
 }
 
 .subTitle {
