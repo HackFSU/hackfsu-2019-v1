@@ -92,10 +92,14 @@ a {
 
 #mlhImg {
 	position: absolute;
-	width: 177px; height: 307px;
+	width: 6em; height: 10em;
 	right: 50px; top: 0px;
 }
-
+@media(max-width: 520px) {
+	#mlhImg {
+	opacity: 0;
+	}
+}
 .pageContent {
 	position: relative;
 	box-sizing: border-box;
