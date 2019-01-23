@@ -1,5 +1,5 @@
 function main() {
-
+	
 	//var logoBaseCan = document.createElement("canvas");
 	var logoImg = document.getElementById("logo");
 	var logoImgData = null;

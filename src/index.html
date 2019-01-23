@@ -9,22 +9,22 @@
 	<title>HackFSU 6</title>
 </head>
 
-<body>
+<body class="preload">
 	<div id="allPages">
-
+	
 		<div id="mainPage" class="page">
 
 			<div id="mainTop">
 				
 				<img id="mlhImg"
-					src="images/mlh_official_2019.png"
+					src="images/mlh-trust-badge-2019-gray.svg"
 					alt="MLH offical 2019 season banner" />
 					
 					
 				
 				<div class="pageContent mainContent">
 
-					<div id="titleContainer">
+					<div id="titleContainer" >
 						<div class="title">hackfsu</div>
 						<div id="logoContainer">
 							<img id="logo" alt="hack fsu"
@@ -159,6 +159,19 @@
 	</div>
 
 	</div>
-
+	//this allows the images to be blocked until the page loads
+	<script>
+	document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('titleContainer').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('titleContainer').style.visibility="visible";
+	  },1);
+  }
+}
+	</script>
 </body>
 </html>
