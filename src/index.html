@@ -21,7 +21,7 @@
 					alt="MLH offical 2019 season banner" />
 					*/
 					--->
-				
+
 				<div class="pageContent mainContent">
 
 					<div id="titleContainer">
@@ -48,8 +48,14 @@
 					<div class="mainBar blueBar"></div>
 				</div>
 			</div>
-
-
+	</div>
+			<div id="navbar">
+				<a class="active" href="#mainPage">Home</a>
+				<a href="#infoPage">Info</a>
+				<a href="#faqPage">FAQs</a>
+				<a href="#culturePage">Culture</a>
+				<a href="#sponsorPage">Sponsors</a>
+			</div>
 		</div>
 
 		<div id="infoPage" class="page">
@@ -101,7 +107,7 @@
 
 			</div>
 		</div> <!-- /#faqPage -->
-	     <img class="swirl_border" src="images/img-03.svg">
+			 <img class="swirl_border" src="images/img-03.svg">
 
 		<div id="culturePage" class="page">
 			<div class="pageContent">
@@ -133,17 +139,30 @@
 				</div>
 				<div class="subSubTitle">&copy; HackFSU 6</div>
 				<div style="text-align:center">
-		            <a href= "https://www.facebook.com/hackfsu/" class="fa fa-facebook"></a>
-		            <a href= "https://twitter.com/hackfsu" class="fa fa-twitter"></a>
-		            <a href= "https://www.instagram.com/hackfsu/" class="fa fa-instagram"></a>
-		            <a href= "https://hackfsu6.slack.com/" class="fa fa-slack"></a>
-	            </div>
+								<a href= "https://www.facebook.com/hackfsu/" class="fa fa-facebook"></a>
+								<a href= "https://twitter.com/hackfsu" class="fa fa-twitter"></a>
+								<a href= "https://www.instagram.com/hackfsu/" class="fa fa-instagram"></a>
+								<a href= "https://hackfsu6.slack.com/" class="fa fa-slack"></a>
+							</div>
 			</div>
 		</div> <!-- /#sponsorPage -->
 
-	</div>
-
 	<script src="hackfsu.js" charset="utf-8"></script>
+
+	<script>
+	window.onscroll = function() {scrollNavbar()};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function scrollNavbar() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+	}
+	</script>
 
 </body>
 </html>
