@@ -1,346 +1,350 @@
 
 @font-face {
-	font-family: 'GalanoGrotesque';
-	src: url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.eot'); /* IE9 Compat Modes */
-	src: url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			 url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.woff2') format('woff2'), /* Super Modern Browsers */
-			 url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.woff') format('woff'), /* Pretty Modern Browsers */
-			 url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-			 url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-family: 'GalanoGrotesque';
+  src: url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
-	font-family: 'Avenir';
-	src: url('fonts/AvenirLTStd-Book.eot'); /* IE9 Compat Modes */
-	src: url('fonts/AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		 url('fonts/AvenirLTStd-Book.woff2') format('woff2'), /* Super Modern Browsers */
-		 url('fonts/AvenirLTStd-Book.woff') format('woff'), /* Pretty Modern Browsers */
-		 url('fonts/AvenirLTStd-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
-		 url('fonts/AvenirLTStd-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'Avenir';
+    src: url('fonts/AvenirLTStd-Book.eot'); /* IE9 Compat Modes */
+    src: url('fonts/AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/AvenirLTStd-Book.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/AvenirLTStd-Book.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/AvenirLTStd-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/AvenirLTStd-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
-body, html {
-	background: #edf8ff;
-	height: 100%;
-	margin: 0 auto;
-	text-align: center;
-	font-family: Avenir;
+body {
+    background: #edf8ff;
+    top: 0px;
+    text-align: center;
+    margin: 0px; padding: 0px;
+    overflow-y: scroll;
+    font-family: Avenir;
 }
 
 #allPages {
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	width: 100%;
-	left: 0px; top: 0px;
-	/* max-width: 1200px; */
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    left: 0px; top: 0px;
+    /* max-width: 1200px; */
 }
 
 .page {
-	position: relative;
-	height: 100vh;
-	text-align: center;
-	/* TODO: figure out how to handle smaller windows */
-	/* eg, do we want title to nest upwards? */
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    /* TODO: figure out how to handle smaller windows */
+    /* eg, do we want title to nest upwards? */
 }
 
 #infoPage, #faqPage, #culturePage, #sponsorPage {
-	text-align: left;
-	font-size: 2em;
+    text-align: left;
+    font-size: 2em;
 }
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 #faqPage {
-	text-align: center;
-	background: #2460a0;
-	-webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
-					clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+    text-align: center;
+    background: #2460a0;
+    -webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
 }
 
 #titleContainer {
-	position: relative;
+    position: relative;
 }
 /*if page is larger than mobile do this*/
 @media(min-width:800px) { #logoContainer {
-	position: absolute;
-	/*width: 196px; height: 58px; */
-	height: 100%;
-	right: 100%; top: 3em;
+    position: absolute;
+    /*width: 196px; height: 58px; */
+    height: 100%;
+    right: 100%; top: 3em;
 }
 }
 
 #logoContainer {
-	padding-right: 20px;
-
+    padding-right: 20px;
+    
 }
 
 #logo {
-	width: 538px; height: 202px;
-	/* -webkit-filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
-			filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
-			*/
+    width: 538px; height: 202px;
+    /* -webkit-filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
+            filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
+            */
 
 }
 #mainPage {
-	background: url(images/img-2.svg);
-
+    background: url(images/img-2.svg);
+    
 
 }
 
 
 #mlhImg {
-	position: absolute;
-	width: 177px; height: 307px;
-	right: 50px; top: 0px;
+    position: absolute;
+    width: 6em; height: 10em;
+    right: 50px; top: 0px;
 }
-
+@media(max-width: 520px) {
+    #mlhImg {
+    opacity: 0;
+    }
+}
 .pageContent {
-	position: relative;
-	box-sizing: border-box;
-	display: inline-block;
-	vertical-align: middle;
-	width: 100%;
-	padding: 4%;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    padding: 4%;
 }
 
 .mainContent {
-	width: auto;
+    width: auto;
 }
 .title {
-	color: #2460a0;
-	font-size: 4em;
-	font-family: GalanoGrotesque;
-	margin-bottom: -14px;
+    color: #2460a0;
+    font-size: 4em;
+    font-family: GalanoGrotesque;
+    margin-bottom: -14px;
 }
 @media(min-width:800px) {
 .title {
-	color: #2460a0;
-	font-size: 8em;
-	font-family: GalanoGrotesque;
-	margin-bottom: -14px;
+    color: #2460a0;
+    font-size: 8em;
+    font-family: GalanoGrotesque;
+    margin-bottom: -14px;
 }
 }
 @media(min-width:800px) {
 .subTitleSkinny {
-	color: #525252;
-	font-size: 2em;
+    color: #525252;
+    font-size: 2em;
 }
 }
 .subTitleSkinny {
-	color: #525252;
-	font-size: 1.5em;
-	letter-spacing: 3px;
+    color: #525252;
+    font-size: 1.5em;
+    letter-spacing: 3px;
 }
-@media(max-width:506px) {
-	span {
-	display: none;
-	opacity: 0;
-	}
+@media(max-width:506px) { 
+    span {
+    display: none;
+    opacity: 0;
+    }
 }
 
 .subTitle {
-	font-family: GalanoGrotesque;
-	font-size: 2em;
+    font-family: GalanoGrotesque;
+    font-size: 2em;
 }
 
 .subSubTitle {
-	font-family: Avenir;
-	font-size: 1.6em;
-	font-weight: bold;
-	margin-top: 0.4em;
-	margin-bottom: 0.4em;
+    font-family: Avenir;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
 }
 
 .contentText {
-	font-family: Avenir;
-	font-size: 1.4em;
+    font-family: Avenir;
+    font-size: 1.4em;
 }
 
 .boldText {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .leftText {
-	text-align: left;
+    text-align: left;
 }
 @media(max-width:800px) {
 #getUpdatesBtn {
-	width: 4vm; height: 1vm;
-	font-size: 1em;
-	font-weight: bold;
-	font-family: Avenir;
-	vertical-align: middle;
-	margin: 0 auto;
-
+    width: 4vm; height: 1vm;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Avenir;
+    vertical-align: middle;
+    margin: 0 auto;
+    
 
 
 }
 }
 #getUpdatesBtn {
-	font-size: 1.3em;
-	font-weight: bold;
-	width: 160px;
-	margin: 0 auto;
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 160px;
+    margin: 0 auto;
 }
 
 
 
 .button {
-	cursor: pointer;
-	vertical-align: middle;
-	color: white;
-	background: #36c7e2;
-	line-height: 60px;
-	border-radius: 89px;
-	width: 90px;
-	-webkit-touch-callout: none; /* iOS Safari */
-		-webkit-user-select: none; /* Safari */
-		 -khtml-user-select: none; /* Konqueror HTML */
-			 -moz-user-select: none; /* Firefox */
-				-ms-user-select: none; /* Internet Explorer/Edge */
-						user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    cursor: pointer;
+    vertical-align: middle;
+    color: white;
+    background: #36c7e2;
+    line-height: 60px;
+    border-radius: 89px;
+    width: 90px;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 #getUpdatesBtn:hover {
-	background: #44b9ce;
+    background: #44b9ce;
 }
 
 #mainBottom {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	overflow-x: hidden;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    overflow-x: hidden;
 }
 @media(max-width:800px) {
-	#mainBottom {
-	overflow: hidden;
-	position: fixed;
-	bottom: 0;
+    #mainBottom {
+    overflow: hidden;
+  position: fixed;
+  bottom: 0;
  width: ;
-	}
+    }
 }
 
-
 .mainBar {
-	position: relative;
-	width: 100%; height: 36px;
-	display: block;
-	margin: 0px;
-	padding: 0px;
-	/* box-sizing: border-box; */
-	border: 1px solid #ffffff22;
+    position: relative;
+    width: 100%; height: 36px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+    border: 1px solid #ffffff22;
 }
 
 .orangeBar {
-	background: #ff7756;
+    background: #ff7756;
 }
 
 .yellowBar {
-	background: #ffc875;
+    background: #ffc875;
 }
 
 .blueBar {
-	background: #36c7e2;
+    background: #36c7e2;
 }
 
 .sepLine {
-	position: relative;
-	display: block;
-	width: 150px;
-	height: 8px;
-	margin: 0.4em 0px;
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 8px;
+    margin: 0.4em 0px;
 }
 
 #navbar {
-	overflow: hidden;
-	background-color: #ff7757;
-	font-family: 'GalanoGrotesque';
-	z-index: 999;
+    overflow: hidden;
+    background-color: #ff7757;
+    font-family: 'GalanoGrotesque';
+    z-index: 999;
 }
 
 #navbar a {
-	float: left;		/*change this to 'center' for horizontal bars, 'left' for single bar*/
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
+    float: left;        /*change this to 'center' for horizontal bars, 'left' for single bar*/
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
 #navbar a:hover {
-	background-color: #ffc975;
-	color: black;
+    background-color: #ffc975;
+    color: black;
 }
 
 #navbar a.active {
-	background-color: #30ddf4;
-	color: white;
+    background-color: #30ddf4;
+    color: white;
 }
 
 #navbar a.active:hover {
-	background-color: #36c8e3;
-	color: black;
+    background-color: #36c8e3;
+    color: black;
 }
 
 .sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .sticky + .content {
-	padding-top: 60px;
+    padding-top: 60px;
 }
 
 #dropdownContainer {
-	display: relative;
-	text-align: center;
-	width: 90%;
-	margin-top: -20px;
+    display: relative;
+    text-align: center;
+    width: 90%;
+    margin-top: -20px;
 }
 
 .dropdown {
-	position: relative;
-	display: inline-block;
-	font-weight: bold;
-	width: 90%;
-	/* max-width: 800px; */
-	background: white;
-	padding: 2%;
-	margin:  1%;
-	text-align: left;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    width: 90%;
+    /* max-width: 800px; */
+    background: white;
+    padding: 2%;
+    margin:  1%;
+    text-align: left;
 }
 
 .dropdownArrow {
-	position: absolute;
-	height: 1.6em;
-	width:  1.6em;
-	right: 1em;
+    position: absolute;
+    height: 1.6em;
+    width:  1.6em;
+    right: 1em;
 }
 
 #telescope {
-	position: relative;
-	display: inline;
-	width: 28%;
-	float: left;
+    position: relative;
+    display: inline;
+    width: 28%;
+    float: left;
 }
 
 #cultureInner {
-	position: relative;
-	display: inline;
-	width: 60%;
-	float: right;
+    position: relative;
+    display: inline;
+    width: 60%;
+    float: right;
 }
 
 #sponsorPage {
-	background: white;
+    background: white;
 }
 
 #footer .fa {
-	padding-top:20px;
-	padding-left:10px;
-	color:#fff;
-	font-size: 20px;
-	text-decoration:none;
+    padding-top:20px;
+    padding-left:10px;
+    color:#fff;
+    font-size: 20px;
+    text-decoration:none;
 }
