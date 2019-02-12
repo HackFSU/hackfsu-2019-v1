@@ -177,6 +177,7 @@ a {
 
 }
 }
+
 #getUpdatesBtn {
 	font-size: 1.3em;
 	font-weight: bold;
@@ -306,9 +307,10 @@ a {
 	font-weight: bold;
 	width: 90%;
 	/* max-width: 800px; */
-	background: white;
-	padding: 2%;
-	margin:  1%;
+	/*background: white; */
+	color: white;
+	padding: 1%;
+	margin: 1%;
 	text-align: left;
 }
 
@@ -317,6 +319,12 @@ a {
 	height: 1.6em;
 	width:  1.6em;
 	right: 1em;
+}
+
+.dropdown-content {
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
 }
 
 #telescope {
