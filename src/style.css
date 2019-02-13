@@ -73,7 +73,7 @@ a {
 
 #logoContainer {
     padding-right: 20px;
-    
+
 }
 
 #logo {
@@ -85,7 +85,7 @@ a {
 }
 #mainPage {
     background: url(images/img-2.svg);
-    
+
 
 }
 
@@ -137,7 +137,7 @@ a {
     font-size: 1.5em;
     letter-spacing: 3px;
 }
-@media(max-width:506px) { 
+@media(max-width:506px) {
     span {
     display: none;
     opacity: 0;
@@ -177,7 +177,7 @@ a {
     font-family: Avenir;
     vertical-align: middle;
     margin: 0 auto;
-    
+
 
 
 }
@@ -313,7 +313,7 @@ a {
 	width: 90%;
 	/* max-width: 800px; */
 	/*background: white; */
-	color: white;
+	color: black;
 	padding: 1%;
 	margin: 1%;
 	text-align: left;
