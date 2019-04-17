@@ -1,4 +1,7 @@
+@charset "UTF-8";
+/* Edits by Richard (RJ) Valencia from 2/20/2019 - //2019 */
 
+/* FONT-FACE CODE ------------------------------------------------------------------------*/
 @font-face {
   font-family: 'GalanoGrotesque';
   src: url('fonts/Rene_Bieder_Galano_Grotesque_DEMO_Bold.eot'); /* IE9 Compat Modes */
@@ -19,6 +22,10 @@
          url('fonts/AvenirLTStd-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+/* GENERAL STYLES -------------------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: #edf8ff;
     top: 0px;
@@ -27,7 +34,14 @@ body {
     overflow-y: scroll;
     font-family: Avenir;
 }
+a {
+    text-decoration: none;
+}
+a:visited {
+  color: #000;
+}
 
+/* ID'S -----------------------------------------------------------------------------------*/
 #allPages {
     position: relative;
     display: inline-block;
@@ -36,69 +50,100 @@ body {
     left: 0px; top: 0px;
     /* max-width: 1200px; */
 }
-
-.page {
-    position: relative;
-    height: 100vh;
-    text-align: center;
-    /* TODO: figure out how to handle smaller windows */
-    /* eg, do we want title to nest upwards? */
-}
-
-#infoPage, #faqPage, #culturePage, #sponsorPage {
+#infoPage, #schedulePage, #faqPage, #culturePage, #sponsorPage{
     text-align: left;
-    font-size: 2em;
+    font-size: 1.7em;
+    padding-left: 3em;
 }
-a {
-    text-decoration: none;
+#infoPage {
+  margin-bottom: 4em;
+  background: #fff;
+}
+#schedulePage {
+  
 }
 #faqPage {
     text-align: center;
     background: #2460a0;
-    -webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
 }
-
+#culturePage {
+  background: url(images/img-2.svg);
+  padding: 1.5em 0em;
+}
 #titleContainer {
     position: relative;
 }
-/*if page is larger than mobile do this*/
-@media(min-width:800px) { #logoContainer {
-    position: absolute;
-    /*width: 196px; height: 58px; */
-    height: 100%;
-    right: 100%; top: 3em;
-}
-}
-
 #logoContainer {
     padding-right: 20px;
 
 }
-
 #logo {
-    width: 538px; height: 202px;
+    width: 120px;
+    /* height: 202px; */
+    float: left;
+    padding: 20px;
     /* -webkit-filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
             filter: brightness(62%) sepia(100%) hue-rotate(-213deg) saturate(350%) contrast(0.89);
             */
-
 }
 #mainPage {
     background: url(images/img-2.svg);
-
-
+    height: 100vh;
 }
-
-
 #mlhImg {
     position: absolute;
     width: 6em; height: 10em;
     right: 50px; top: 0px;
 }
-@media(max-width: 520px) {
-    #mlhImg {
-    opacity: 0;
-    }
+#getUpdatesBtn {
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 160px;
+    margin: 0 auto;
+}
+#getUpdatesBtn:hover {
+    background: #44b9ce;
+}
+#clickHereBtn {
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#clickHereBtn:hover {
+    background: #44b9ce;
+}
+#mainBottom {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    overflow-x: hidden;
+}
+#footer {
+    background-color: #444649;
+}
+#footer a, #footer p {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.75em;
+    margin: 0;
+}
+#footer a:hover {
+    text-decoration: underline;
+}
+#logo_resize {
+    width: 72px;
+    height: 72px;
+}
+/* CLASSES ----------------------------------------------------------------------------------*/
+.page {
+    position: relative;
+    text-align: center;
+    /* TODO: figure out how to handle smaller windows */
+    /* eg, do we want title to nest upwards? */
 }
 .pageContent {
     position: relative;
@@ -108,90 +153,41 @@ a {
     width: 100%;
     padding: 4%;
 }
-
 .mainContent {
     width: auto;
 }
-.title {
-    color: #2460a0;
-    font-size: 4em;
-    font-family: GalanoGrotesque;
-    margin-bottom: -14px;
-}
-@media(min-width:800px) {
 .title {
     color: #2460a0;
     font-size: 8em;
     font-family: GalanoGrotesque;
     margin-bottom: -14px;
 }
-}
-@media(min-width:800px) {
-.subTitleSkinny {
-    color: #525252;
-    font-size: 2em;
-}
-}
 .subTitleSkinny {
     color: #525252;
     font-size: 1.5em;
     letter-spacing: 3px;
 }
-@media(max-width:506px) {
-    span {
-    display: none;
-    opacity: 0;
-    }
-}
-
 .subTitle {
     font-family: GalanoGrotesque;
     font-size: 2em;
 }
-
 .subSubTitle {
     font-family: Avenir;
-    font-size: 1.6em;
+    font-size: 1.1em;
     font-weight: bold;
     margin-top: 0.4em;
     margin-bottom: 0.4em;
 }
-
 .contentText {
     font-family: Avenir;
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
-
 .boldText {
     font-weight: bold;
 }
-
 .leftText {
     text-align: left;
 }
-@media(max-width:800px) {
-#getUpdatesBtn {
-    width: 4vm; height: 1vm;
-    font-size: 1em;
-    font-weight: bold;
-    font-family: Avenir;
-    vertical-align: middle;
-    margin: 0 auto;
-
-
-
-}
-}
-
-#getUpdatesBtn {
-    font-size: 1.3em;
-    font-weight: bold;
-    width: 160px;
-    margin: 0 auto;
-}
-
-
-
 .button {
     cursor: pointer;
     vertical-align: middle;
@@ -207,25 +203,6 @@ a {
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
-#getUpdatesBtn:hover {
-    background: #44b9ce;
-}
-
-#mainBottom {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    overflow-x: hidden;
-}
-@media(max-width:800px) {
-    #mainBottom {
-    overflow: hidden;
-  position: fixed;
-  bottom: 0;
- width: ;
-    }
-}
-
 .mainBar {
     position: relative;
     width: 100%; height: 36px;
@@ -235,7 +212,6 @@ a {
     /* box-sizing: border-box; */
     border: 1px solid #ffffff22;
 }
-
 .orangeBar {
     background: #ff7756;
 }
@@ -253,41 +229,8 @@ a {
     display: block;
     width: 150px;
     height: 8px;
-    margin: 0.4em 0px;
+    margin: 1.5em 0px;
 }
-
-#navbar {
-    overflow: hidden;
-    background-color: #ff7757;
-    font-family: 'GalanoGrotesque';
-    z-index: 999;
-}
-
-#navbar a {
-    float: left;        /*change this to 'center' for horizontal bars, 'left' for single bar*/
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-#navbar a:hover {
-    background-color: #ffc975;
-    color: black;
-}
-
-#navbar a.active {
-    background-color: #30ddf4;
-    color: white;
-}
-
-#navbar a.active:hover {
-    background-color: #36c8e3;
-    color: black;
-}
-
 .sticky {
     position: fixed;
     top: 0;
@@ -297,14 +240,88 @@ a {
 .sticky + .content {
     padding-top: 60px;
 }
+.jquery {
+ /* Used for anchor for scrolling effect */
+}
+/* NAVABAR STYLES --------------------------------------------------------------------------------*/
+#navbar {
+    overflow: hidden;
+    z-index: 999;
+}
+#navbar ul {
+	list-style: none; /* eliminates bullets */
+	/* adjust padding top to adjust nav bar vertical position */
+	padding-top: 0px;
+} 
+#navbar li {
+	float: left; /* changes list from vertical to horizontal */
+	color: #525252;
+ text-align: center;
+ padding: 9px 70px;
+ text-decoration: none;
+ font-size: 20px;
+}
+/* #navbar a {
+    float: left;        /*change this to 'center' for horizontal bars, 'left' for single bar*/
+ /*   display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}*/
+#navbar a:hover {
+    background-color: #ffc975;
+    color: black;
+}
+#navbar a.active {
+    background-color: #30ddf4;
+    color: white;
+}
+#navbar a.active:hover {
+    background-color: #36c8e3;
+    color: black;
+}
 
+/* ACCORDION FOR FAQ PAGE STYLES ----------------------------------------------------------------------*/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  padding: 14px;
+  padding-left: 5px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 0.9em;
+  font-family: Avenir;
+  font-weight: bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  
+}
+/* DROPDOWN (FROM FAQ PAGE) STYLES --------------------------------------------------------------------*/
 #dropdownContainer {
     display: relative;
     text-align: center;
     width: 90%;
     margin-top: -20px;
 }
-
 .dropdown {
 <<<<<<< HEAD
 	position: relative;
@@ -321,7 +338,7 @@ a {
     position: relative;
     display: inline-block;
     font-weight: bold;
-    width: 90%;
+    width: 100%;
     /* max-width: 800px; */
     background: white;
     padding: 2%;
@@ -334,7 +351,7 @@ a {
     position: absolute;
     height: 1.6em;
     width:  1.6em;
-    right: 1em;
+    right: 6em;
 }
 
 .dropdown-content {
@@ -343,24 +360,37 @@ a {
   display: block;
 }
 
+/*SCHEDULE PAGE STYLES ------------------------------------------------------------------------------*/
+#rocket {
+    position: relative;
+    display: inline;
+    width: 55%;
+    float: right;
+    left: 50px;
+}
+
+/*CULTURE PAGE STYLES ------------------------------------------------------------------------------*/
 #telescope {
     position: relative;
     display: inline;
-    width: 28%;
+    width: 35%;
     float: left;
+    top: 75px;
 }
 
 #cultureInner {
     position: relative;
     display: inline;
-    width: 60%;
+    width: 55%;
     float: right;
 }
 
+/*SPONSOR PAGE STYLES ----------------------------------------------------------------------------*/
 #sponsorPage {
     background: white;
 }
 
+/*FOOTER STYLES ----------------------------------------------------------------------------------*/
 #footer .fa {
     padding-top:20px;
     padding-left:10px;

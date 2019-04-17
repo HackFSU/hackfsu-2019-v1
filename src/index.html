@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>HackFSU 6</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="media-queries.css" rel="stylesheet" type="text/css"
     <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
-    <title>HackFSU 6</title>
+    <link href="media-queries.css" rel="stylesheet" type="text/css"
 </head>
 
 <body class="preload">
@@ -14,6 +16,15 @@
         <div id="mainPage" class="page">
 
             <div id="mainTop">
+                <div id ="navbar">
+                    <img id="logo" alt="hack fsu"
+                    src="images/img-1.svg" />
+                    <ul>
+                        <li><a href= "#schedulePage" class = "jquery">Schedule</a></li>
+                        <li><a href= "#faqPage" class = "jquery">FAQ</a></li>
+                        <li><a href= "#sponsorPage" class = "jquery">Sponsor Us</a></li>
+                    </ul>
+                </div>
 
                 <img id="mlhImg"
                         src="images/mlh-trust-badge-2019-gray.svg"
@@ -26,29 +37,27 @@
                     <div id="titleContainer" >
                         <div class="title">hackfsu</div>
                         <div id="logoContainer">
-                            <img id="logo" alt="hack fsu"
-                                            src="images/img-1.svg" />
-                        </div>
-                    </div>
+                        </div> <!-- end of logoConatiner -->
+                    </div> <!-- end of titleContainer -->
 
                     <div class="subTitleSkinny">FLORIDA&nbsp;STATE <span>&bull;</span> TALLAHASSEE,&nbsp;FL</div>
-                    <div class="subTitleSkinny" style="font-weight: bolder;">APRIL&nbsp;5-7,&nbsp;2019</div>
+                    <div class="subTitleSkinny" style="font-weight: bolder;">COMING FALL 2019</div>
 
                     <a href = "https://docs.google.com/forms/d/e/1FAIpQLSfNdTHaWlN3EyRusVbKWNS8l9nTrl4mKG24QBRwyquCyi7f1Q/viewform">
                         <br>
                         <div id="getUpdatesBtn" class="button">Get updates</div>
                     </a>
 
-                </div>
+                </div> <!-- end of pageContent mainContent -->
 
                 <div id="mainBottom">
                     <div class="mainBar orangeBar"></div>
                     <div class="mainBar yellowBar"></div>
                     <div class="mainBar blueBar"></div>
-                </div>
-            </div>
+                </div> <!-- end of mainBottom -->
+            </div> <!-- end of mainTop -->
 
-        </div>
+        </div> <!-- end of mainPage -->
 
         <div id="infoPage" class="page">
             <div class="pageContent">
@@ -76,117 +85,193 @@
 
                 <div>
                     Working alongside equally passionate people allows you to
-                    become encouraged to
+                    become encouraged to keep building and learning. You'll be amazed
+                    what you can accomplish as a team.
                 </div>
 
-            </div>
-        </div> <!-- /#infoPage -->
+            </div> <!-- end of pageContent -->
+        </div> <!-- end of #infoPage -->
+        
+        <div id= "schedulePage" class= "page">
+            <div class= "pageContent">
+                <img id="rocket" src="images/rocket.png" />
+                <h1><b>Schedule</b></h1>
+                <div class="sepLine blueBar" style="margin-bottom: 50px;"></div>
+                    <h2>FRIDAY</h2>
+                        <table border="0" cellpadding="9" cellspacing="0">
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td>Check In</td>
+                        </tr>
+                        <tr>
+                            <td>6:00 PM</td>
+                            <td>Sponsor Expo</td>
+                        </tr>
+                        <tr>
+                            <td>7:45 PM</td>
+                            <td>Opening Ceremony</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 PM</td>
+                            <td>Hacking Begins</td>
+                        </tr> 
+                        </table>
+                    <ul>
+                        <li></li>
+                        <li>Full Schedule Coming Soon!</li>
+                        <li></li>
+                    </ul>
+                    <h2>SUNDAY</h2>
+                        <table border="0" cellpadding="9" cellspacing="0">
+                        <tr>
+                            <td>9:30 AM</td>
+                            <td>Hacking Ends</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td>Expo Begins</td>
+                        </tr>
+                        <tr>
+                            <td>1:00 PM</td>
+                            <td>Closing Ceremony</td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM</td>
+                            <td>Departure</td>
+                        </tr> 
+                        </table>
+            </div> <!-- end of pageContent -->
+        </div> <!-- end of #schedulePage -->
 
         <div id="faqPage" class="page">
             <div class="pageContent">
                 <div class="subTitle boldText leftText" style="padding-top: 100px; color: white;">FAQs</div>
-                <div class="sepLine blueBar" style="margin-bottom: 100px; margin-top: 50px;"></div>
+                <div class="sepLine blueBar" style="margin-bottom: 100px;"></div>
                 <div id="dropdownContainer">
                     <div class="dropdown">
-                        <div>When and where?
+                        <button class= "accordion">When and where?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
-                                <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
+                                    <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
-                            <h6> April 5th to 7th at Dirac Library.</h6>
-                        </div>
-                    </div>
+                        </button>
+                            <div class= "panel">
+                                <h6> April 5th to 7th at Dirac Library.</h6>
+                            </div> <!-- end of Panel -->
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>How long is it?
+                        <button class= "accordion">How long is it?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> It's 3 Days long from Friday to Sunday.</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel -->
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>Am I invited?
+                        <button class= "accordion">Am I invited?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6>Yes! Just register above.</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel -->    
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>Not a student?
+                        <button class= "accordion">Not a student?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> ????</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>Food?
+                        <button class= "accordion">Food?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> ????</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>How do teams work?
+                        <button class= "accordion">How do teams work?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> ????</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>What's it going to cost me?
+                        <button class= "accordion">What's it going to cost me?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> The hackathon is completely free!</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>What can I build?
+                        <button class= "accordion">What can I build?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> ????</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>What should I bring?
+                        <button class= "accordion">What should I bring?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> ????</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>How does registration work?
+                        <button class= "accordion">How does registration work?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> ????</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>What if this is my first hackathon?
+                        <button class= "accordion">What if this is my first hackathon?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> ????</h6>
-                        </div>
-                    </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
                     <div class="dropdown">
-                        <div>Wait but I have another question?
+                        <button class= "accordion">Wait but I have another question?
                             <svg class="dropdownArrow"viewBox="0 0 50 50" xml:space="preserve">
                                 <polyline fill="none" stroke="#3cc7e0" stroke-width="10%" stroke-linecap="round" stroke-linejoin="round" points="0 0, 25 25, 50 0" />
                             </svg>
+                        </button>
+                        <div class= "panel">
                             <h6> ????</h6>
-                        </div>
-                    </div>
-                </div>
+                        </div> <!-- end of Panel --> 
+                    </div> <!-- end of dropDown -->
+                </div> <!-- end of dropDownContainer -->
 
-            </div>
-        </div> <!-- /#faqPage -->
+            </div> <!-- end of pageContent -->
+        </div> <!-- end of faqPage -->
         <img class="swirl_border" src="images/img-03.svg">
 
         <div id="culturePage" class="page">
@@ -208,28 +293,61 @@
                         other students from around the country. Mentors from the
                         industry volunteer their knowledge to support your crazy
                         ideas. All we ask is that you come prepared with an open
-                        mind, ready to dedicate
-                    </div>
-                </div>
-
-            </div>
-        </div> <!-- /#culturePage -->
+                        mind, ready to dedicate thirty hours to learn something
+                        new.
+                    </div> <!-- end of contentText and leftText -->
+                </div> <!-- end of cultureInner -->
+            
+            </div> <!-- end of pageContent -->
+        </div> <!-- end of #culturePage -->
 
         <div id="sponsorPage" class="page">
             <div class="pageContent">
                 <div class="subTitle boldText leftText">Thank you sponsors!</div>
 
                 <div class="sepLine blueBar"></div>
-            </div>
-        </div> <!-- /#culturePage -->
+                <!-- The pictures will go here -->
+                
+                <p style= "text-align: center;">Intereseted in Becoming a Sponsor?</p>
+                <a href = "https://docs.google.com/forms/d/e/1FAIpQLSfNdTHaWlN3EyRusVbKWNS8l9nTrl4mKG24QBRwyquCyi7f1Q/viewform" >
+                        <div id="clickHereBtn" class="button">Click Here</div>
+                    </a>
+                    <!-- Need to change the href to wherever new sponsors need to go -->
+            </div> <!-- end of pageContent -->
+        </div> <!-- end of sponsorPage -->
+        <div id="footer" class="page">
+            <div class="pageContent">
+                <table border="0" cellpadding="9" cellspacing="0" align = "center" style = "margin-bottom: 20px">
+                    <tr>
+                        <td><a href = "https://www.facebook.com/hackfsu/" target = "_blank"><img src = "logos\f-Logo_Assets\F_Logo_Online_09_2018\White\PNG\flogo-HexRBG-Wht-72.png" alt = "Facebook Logo"></a></td>
+                        <td><a href = "https://twitter.com/hackfsu?lang=en" target = "_blank"><img id = "logo_resize" src = "logos\Twitter-Logos\Twitter Logos\Twitter Logos\Twitter_Logo_WhiteOnImage\Twitter_Logo_WhiteOnImage.png" alt = "Twitter Logo"></a></td>
+                        <td><a href = "https://www.instagram.com/hackfsu/?hl=en" target = "_blank"><img id = "logo_resize" src = "logos\glyphlogo_may2016_onlinev2\GlyphLogo_May2016_Onlinev2\glyph-logo_May2016.png" alt = "Instagram Logo"></a></td>
+                        <td><a href = "https://slack.com/" target = "_blank"><img id = "logo_resize" src = "logos\slack-selected-assets\Slack Mark Monochrome White.png" alt = "Slack Logo"></a></td>
+                    </tr>
+                    </table>
+                <a href = mailto:hackfsu.team@gmail.com>hackfsu.team@gmail.com</a>
+                <p>&copy;HackFSU 6</p>
+            </div> <!-- end of pageContent -->
+        </div> <!-- end of footer -->
 
-    </div>
-
-    </div>
-    <!--this allows the images to be blocked until the page loads-->
+    </div> <!-- end of allPages -->
+    
+    <!-- JAVASCRIPT CODE -->
+    <!-- Scrolling navigation script by Geo Miller glmiller@pic.fsu.edu -->  
+    <script src="jquery.js" type='text/javascript'>
+    jQuery(document).ready(function () {
+      jQuery('.jquery').click(function() {
+        targetName = jQuery(this).attr('href');
+        targetLocation = jQuery(targetName).offset().top;
+        jQuery('html, body').animate({scrollTop:targetLocation}, 'slow');
+        return false;
+      });
+    });
+    </script>
+    <!-- this allows the images to be blocked until the page loads -->
     <script>
         document.onreadystatechange = function () {
-            var state = document.readyState
+            var state = document.readyState;
             if (state == 'interactive') {
                 document.getElementById('titleContainer').style.visibility="hidden";
             } else if (state == 'complete') {
@@ -238,7 +356,24 @@
                     document.getElementById('titleContainer').style.visibility="visible";
                 },1);
             }
-        }
+        };
+    </script>
+    <!-- Accordian Animation for FAQ Page -->
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
     </script>
 </body>
 </html>
