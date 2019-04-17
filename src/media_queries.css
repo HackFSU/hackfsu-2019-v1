@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* By Richard (RJ) Valencia from 2/20/2019 - //2019 */
+
+/* MEDIA-QUERY: WIDTH AT 800px ----------------------------------------*/
+/*if page is larger than mobile do this*/
+@media(min-width:800px) { #logoContainer {
+    position: absolute;
+    /*width: 196px; height: 58px; */
+    height: 100%;
+    right: 100%; top: 3em;
+    }
+}
+
+@media(min-width:800px) {
+.title {
+    color: #2460a0;
+    font-size: 8em;
+    font-family: GalanoGrotesque;
+    margin-bottom: -14px;
+    }
+}
+@media(min-width:800px) {
+.subTitleSkinny {
+    color: #525252;
+    font-size: 2em;
+    }
+}
+
+@media(max-width:800px) {
+#getUpdatesBtn {
+    width: 4vm; height: 1vm;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Avenir;
+    vertical-align: middle;
+    margin: 0 auto;
+    }
+}
+
+@media(max-width:800px) {
+    #mainBottom {
+    overflow: hidden;
+  position: fixed;
+  bottom: 0;
+ width: ;
+    }
+}
+
+/* MEDIA-QUERY: WIDTH AT 520px ----------------------------------------*/
+@media(max-width: 520px) {
+    #mlhImg {
+    opacity: 0;
+    }
+}
+
+
+/* MEDIA-QUERY: WIDTH AT 506px ----------------------------------------*/
+@media(max-width:506px) {
+    span {
+    display: none;
+    opacity: 0;
+    }
+}
